@@ -32,7 +32,7 @@ public class Student {
     }
 
     String getInfo() {
-        // TODO:
+        // TODO: asdsfasfasfas
         return null; // xóa dòng này sau khi cài đặt
     }
 }
