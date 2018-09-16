@@ -1,38 +1,62 @@
-package week1;
-
+import java.util.Scanner;
 public class Student {
+	private String name, id, group, email;
 
-    // TODO: khai báo các thuộc tính cho Student
+	public void setName(String n) {
+		name = n;
+	}
 
-    // TODO: khai báo các phương thức getter, setter cho Student
+	public String getName() {
+		return name;
+	}
 
-    /**
-     * Constructor 1
-     */
-    Student() {
-        // TODO:
-    }
+	public void setId(String n) {
+		id = n;
+	}
 
-    /**
-     * Constructor 2
-     * @param n
-     * @param sid
-     * @param em
-     */
-    Student(String n, String sid, String em) {
-        // TODO:
-    }
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * Constructor 3
-     * @param s
-     */
-    Student(Student s) {
-        // TODO:
-    }
+	public void setGroup(String n) {
+		group = n;
+	}
 
-    String getInfo() {
-        // TODO: asdsfasfasfas
-        return null; // xóa dòng này sau khi cài đặt
-    }
+	public String getGroup() {
+		return group;
+	}
+
+	public void setEmail(String n) {
+		email = n;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+	public String getInfo(){
+		System.out.println(name+"   "+id+"   "+group+"   "+email);
+		return "NAQ";
+	}
+	public Student() {
+		name = "Student";
+		id = "000";
+		group = "INT22041";
+		email = "uet@vnu.edu.vn";
+	}
+
+	public Student(String n, String sid, String em) {
+		name = n;
+		id = sid;
+		email = em;
+		group = "INT22041";
+	}
+
+	public Student(Student s) {
+		name = s.name;
+		id = s.id;
+		group = s.group;
+		email = s.email;
+	}
 }
+	
+	
