@@ -1,3 +1,4 @@
+package week1;
 import java.util.Scanner;
 public class Student {
 	private String name, id, group, email;
