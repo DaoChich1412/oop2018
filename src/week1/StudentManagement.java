@@ -24,22 +24,22 @@ public class StudentManagement {
 		sv4.getInfo();
 		StudentManagement sv=new StudentManagement();
 		if (sv.sameGroup(sv1,sv2)) System.out.println("Two Students 1, 2 have the same group " + sv1.getGroup());
-		else System.out.println("Two Students have the different group");
+		else System.out.println("Two Students 1, 2 have the different group");
 		if (sv.sameGroup(sv2, sv3)) System.out.println("Two Students 2, 3 have the same group " + sv2.getGroup());
-		else System.out.println("Two Students have the different group");
+		else System.out.println("Two Students 2, 3 have the different group");
 		System.out.println(" ");
-		sv.max=5;
+		sv.max=10;
 		sv.students=new Student[sv.max];
 		int i=0;
-		System.out.println("Moi ban nhap danh sach sinh vien: ");
+		System.out.println("A list of Students: ");
 		for(i=0;i<sv.max;i++){
 			String n,I,g,e;
 			sv.students[i]=new Student();
-			System.out.println("***Sinh vien thu "+(i+1)+":");
-			System.out.print("Ho va ten: ");
+			System.out.println("***Student "+(i+1)+":");
+			System.out.print("Name: ");
 			n=input.nextLine();
 			sv.students[i].setName(n);
-			System.out.print("MSSV: ");
+			System.out.print("ID: ");
 			I=input.nextLine();
 			sv.students[i].setId(I);
 			System.out.print("Group: ");
@@ -50,39 +50,63 @@ public class StudentManagement {
 			sv.students[i].setEmail(e);
 		}
 		sv.studentsByGroup();
-		sv.removeStudent("17020986");
+		System.out.println("Delete Student whose ID is: ");
+		String s=input.nextLine();
+		System.out.println("A list of Students after: ");
+		sv.removeStudent(s);
 	}
 	public boolean sameGroup(Student s1, Student s2) {
 		String a,b;
 		a=s1.getGroup();
 		b=s2.getGroup();
-		if(a==b) return true;
+		if(a.equals(b)) return true;
 		else return false;
 	}
 	public void removeStudent(String id){
 		int i=0;
 		int j=0;
 		for(i=0;i<max;i++){
-			if(students[i].getId()==id){
-				System.out.println("NAQ");
+			if(students[i].getId().equals(id)){
 				for(j=i;j<max-1;j++){
-					students[j]=students[j+1];
+					students[i]=students[i+1];
 				}
 				max=max-1;
+				break;
 			}
 		}
+		for(i=0;i<max;i++) students[i].getInfo();
 	}
 	public void studentsByGroup(){
 		int i=0;
 		int j=0;
-		for(i=0;i<max;i++){
+		int k=1;
+		int s=0;
+		int t=1;
+		Student temp;
+		for(i=0;i<max-1;){
 			for(j=i+1;j<max;j++){
-				students[i].getInfo();
 				if(sameGroup(students[i],students[j])){
-					students[j].getInfo();
+					temp=students[i+t];
+					students[i+t]=students[j];
+					students[j]=temp;
+					t=t+1;
+					k=k+1;
+					s=s+1;
 				}
 			}
+			if(s==0){
+				k=k+1;
+				i=k-1;
+			}
+			else i=k-1;
+			t=1;
+			s=0;
+			i++;
+		}
+		for(i=0;i<max;i++){
+			students[i].getInfo();
 		}
 	}
 }
+	
 	
