@@ -47,12 +47,13 @@ class Cat{
 		System.out.println("Mau long cua no la: "+color);
 		System.out.println("No la meo: "+sex);
 	}
+}
 //lop ve sach
 class Book{
 	private String name;//ten sach
 	private String author;//tac gia
 	private String kind;//the loai
-	private long int money;//gia tien
+	private long  money;//gia tien
 	private int score;//diem danh gia sach tren thang diem 10
 	//dat ten sach
 	public void setName(String name){
@@ -79,7 +80,7 @@ class Book{
 		return kind;
 	}
 	//dat gia tien cua sach
-	public void setMoney(long int money){
+	public void setMoney(long  money){
 		this.money=money;
 	}
 	//lay gia tien cua sach
@@ -120,5 +121,69 @@ class Book{
 			}
 		}
 	}
+}
+	//lop may tinh xach tay
+	class Laptop{
+		private String make;//hang san xuat
+		private String ram;//bo nho 
+		private long  money;//gia ca
+		private String os;//he dieu hanh duoc cai san
+		//dat hang san xuat
+		public void setMake(String n){
+			make=n;
+		}
+		//lay ten hang
+		public String getMake(){
+			return make;
+		}
+		//dat dung luong bo nho
+		public void setRam(String n){
+			ram=n;
+		}
+		//lay so lieu bo nho
+		public String getRam(){
+			return ram;
+		}
+		//dat gia tien
+		public void setMoney(long  n){
+			money=n;
+		}
+		//lay gia tien
+		public long getMoney(){
+			return money;
+		}
+		//dat he dieu hanh co san
+		public void setOs(String n){
+			os=n;
+		}
+		//lay ten he dieu hanh
+		public String getOs(){
+			return os;
+		}
+		//Constructor
+		public Laptop(){
+			make="DELL";
+			ram="4.00 GB";
+			money=12000000;
+			os="Windows 7";
+		}
+		//doi he dieu hanh
+		public void ChangeOs(String o){
+			os=o;
+			System.out.println("You want to change OS: "+os);
+		}
+		//thong tin may
+		public void Info(){
+			System.out.println("May hang: "+make);
+			System.out.println("RAM: "+ram);
+			System.out.println("Gia ca: "+money);
+			System.out.println("OS: "+os);
+		}
+	}
+			
+		
+			
+		
+		
 	
 	
