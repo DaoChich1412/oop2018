@@ -68,7 +68,7 @@ public class StudentManagement {
 		for(i=0;i<max;i++){
 			if(students[i].getId().equals(id)){
 				for(j=i;j<max-1;j++){
-					students[i]=students[i+1];
+					students[j]=students[j+1];
 				}
 				max=max-1;
 				break;
