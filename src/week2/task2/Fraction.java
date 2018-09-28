@@ -44,9 +44,9 @@ public class Fraction {
         return temp;
     }
 	
-	public boolean equals(Fraction other){
+	public boolean equals(Object obj){
 		// TODO: Phương thức so sánh hai phân số
-		if((float)numerator/denominator>=(float)other.numerator/other.denominator) return true;
+		if(((Fraction)obj).numberator*denominator==((Fraction)obj).denominator*numberator) return true;
 		else return false;
 	}
 }
