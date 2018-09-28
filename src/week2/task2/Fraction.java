@@ -46,7 +46,7 @@ public class Fraction {
 	
 	public boolean equals(Object obj){
 		// TODO: Phương thức so sánh hai phân số
-		if(((Fraction)obj).numberator*denominator==((Fraction)obj).denominator*numberator) return true;
+		if(this.numerator/((Fraction)obj).numerator==this.denominator/((Fraction)obj).denominator) return true;
 		else return false;
 	}
 }
