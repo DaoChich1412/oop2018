@@ -1,10 +1,10 @@
 package week3;
 
 public class Week3 {
-
+	public static void main(String[] args){}
     public static int max(int m, int n) {
         // TODO: Tìm giá trị lớn nhất của hai số nguyên, giá trị trả về của hàm là số lớn nhất
-		if(m>n) return m;
+		if(m>=n) return m;
 		else return n;
     }
 
@@ -29,12 +29,12 @@ public class Week3 {
         // TODO: Viết chương trình tính chỉ số BMI và in ra kết quả đánh giá
 		double bmi;
 		bmi=weight/(height*height);
-		if(bmi>25) return "Beo phi";
+		if(bmi>25) return "Béo phì";
 		else{
-			if(bmi>=23) return "Thua can";
+			if(bmi>=23) return "Thừa cân";
 			else{
-				if(bmi>=18.5) return "Binh thuong";
-				else return "Thieu can";
+				if(bmi>=18.5) return "Bình thường";
+				else return "Thiếu cân";
 			}
 		}
     }
