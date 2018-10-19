@@ -2,7 +2,6 @@ package week5_6;
 
 import java.awt.*;
 
-import static java.lang.Math.abs;
 
 public class Square extends Shape {
 	protected Position A=new Position();
@@ -10,9 +9,9 @@ public class Square extends Shape {
 	protected int side;
 	public Square(){
 		super();
-		A.setPosition(1,1);
+		A.setPosition(10,10);
 		side=1;
-		D.setPosition(1+side,1+side);
+		D.setPosition(10+side,10+side);
 	}
 	public Square(Color color,boolean fill, int xA, int yA, int side){
 		super(color,fill);

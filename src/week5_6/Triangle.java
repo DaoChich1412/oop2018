@@ -8,9 +8,9 @@ public class Triangle extends Shape{
 	protected Position C=new Position();
 	public Triangle(){
 		super();
-		A.setPosition(1,1);
-		B.setPosition(2,2);
-		C.setPosition(1,2);
+		A.setPosition(10,10);
+		B.setPosition(20,30);
+		C.setPosition(10,20);
 	}
 	public Triangle(Color color,boolean fill, int xA, int yA, int xB, int yB, int xC, int yC){
 		super(color,fill);
@@ -27,8 +27,6 @@ public class Triangle extends Shape{
 	public void move(Graphics g,int x,int y){
 		int a=A.getX()-x;
 		int b=A.getY()-y;
-		x=A.getX();
-		y=A.getY();
 		B.setPosition(B.x+a,B.y+b);
 		C.setPosition(C.x+a,C.y+b);
 		draw(g);

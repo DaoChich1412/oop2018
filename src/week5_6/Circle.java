@@ -7,8 +7,8 @@ public class Circle extends Shape {
 	protected Position O=new Position();
 	public Circle(){
 		super();
-		r=1;
-		O.setPosition(1,1);
+		r=50;
+		O.setPosition(50,50);
 	}
 	public Circle(int r, int x, int y, Color color,boolean fill){
 		super(color,fill);
