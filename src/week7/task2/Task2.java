@@ -23,7 +23,7 @@ public class Task2 {
 		System.out.println("Kết quả: "+c);
 	}
 	public static void ClassCast() throws java.lang.ClassCastException{
-		
+		throw new java.lang.ClassCastException();
 	}
 	public static void IOException() throws IOException {
 		File file=new File("Exception.txt");
